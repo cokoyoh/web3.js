@@ -1,0 +1,22 @@
+{
+  "name": "web3-dapp",
+  "version": "1.0.0",
+  "description": "A simple web3 app to connet to an eth blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cokoyoh/web3.js.git"
+  },
+  "author": "cokoyoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cokoyoh/web3.js/issues"
+  },
+  "homepage": "https://github.com/cokoyoh/web3.js#readme",
+  "dependencies": {
+    "web3": "^1.2.6"
+  }
+}
