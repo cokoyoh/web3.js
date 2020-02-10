@@ -31,7 +31,7 @@ const serialisedTransaction = tx.serialize();
 const rawTransaction = '0x' + serialisedTransaction.toString('hex');
 
 //broadcast a signed transaction
-    web3.eth.sendSignedTransaction(rawTransaction, (error, txHash) => {
+     web3.eth.sendSignedTransaction(rawTransaction, (error, txHash) => {
         console.log('txHash =====> ' + txHash);
     });
 });
