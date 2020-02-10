@@ -1,25 +1,13 @@
+const Tx = require('ethereumjs-tx').Transaction;
+
 const Web3 = require('web3');
-const url = 'http://127.0.0.1:7545';
-const accountOne = '0x3095895c8b8D1F9b82C417324Ffb6457Fd239029'; //address to an Ethereum node account
-const accountTwo = '0xd47018Af036B1f3af75038c5bd47BB4cFC97fAE8'; //address to another Ethereum node account
+const web3 = new Web3('https://ropsten.infura.io/v3/fce376b702dc4074997dfe4e60cd853b');
 
-const web3 = new Web3(url);
+const accountOne = '0x829413Ae31a296e6ce3c061e9B8D759779e39808';
+const accountTwo = '0x3095895c8b8D1F9b82C417324Ffb6457Fd239029';
 
-async function getAccountBalance(accountAddress) {
-    await web3.eth.getBalance(accountAddress, (error, result) => console.log(result));
-}
+const PRIVATE_KEY_ONE = Buffer.from(require('./config').PRIVATE_KEY_ONE, 'hex');
+const PRIVATE_KEY_TWO = Buffer.from(require('./config').PRIVATE_KEY_TWO, 'hex');
 
-async function sendEther() {
-    await web3.eth.sendTransaction({from: accountOne, to: accountTwo, value: web3.utils.toWei('2', 'ether')});
-}
-
-sendEther();
-
-let accountOneBalance = getAccountBalance(accountOne);
-let accountTwoBalance = getAccountBalance(accountTwo);
-
-console.log(accountOneBalance);
-console.log(accountTwoBalance);
-
-
-
+console.info(PRIVATE_KEY_ONE);
+console.info(PRIVATE_KEY_TWO);
